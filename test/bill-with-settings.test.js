@@ -3,9 +3,8 @@ const SettingsBill = require('../bill-with-settings')
 
 describe("bill with settings", function () {
 
-    const settings = SettingsBill()
-
     it("should be able to record the calls", function () {
+        const settings = SettingsBill();
         settings.recordAction("call")
         assert.equal(1, settings.actionsFor("call").length)
     })
